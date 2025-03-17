@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Vazir";
+  src: url("/fonts/IranianSans.ttf") format("ttf"),
+       url("/fonts/Vazir.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 *,
 *::before,
 *::after {
@@ -14,6 +23,7 @@ body,
 .app {
   height: 100%;
   width: 100%;
+  font-family: "Vazir", "IranianSans", sans-serif;
   @apply text-sm;
   @apply bg-white;
   @apply dark:bg-black;

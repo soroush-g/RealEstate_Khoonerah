@@ -82,3 +82,7 @@ export const createNewUserInDatabase = async (
 
   return createUserResponse;
 };
+
+export function formatNumber(number: number): string {
+  return new Intl.NumberFormat("fa-IR").format(number);
+}

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Vazirmatn } from "next/font/google";
+// import { Vazirmatn } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
 import '@/lib/fontawesome'
+import Navbar from "@/components/Navbar";
 
-const vazir = Vazirmatn({ subsets: ["arabic"]});
+// const vazir = Vazirmatn({ subsets: ["arabic"]});
 
 
 export const metadata: Metadata = {
@@ -20,10 +21,13 @@ export default function RootLayout({
   return (
     <html dir="rtl" lang="fa-Ir" suppressHydrationWarning>
       <body
-        className={vazir.className}
+        // className={vazir.className}
       >
-        <Providers> 
-        {children}
+        <Providers>
+          <Navbar />
+          <main>
+            {children}
+          </main>
         </Providers>
       </body>
     </html>
